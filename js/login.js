@@ -56,7 +56,8 @@ document.getElementById('googleBtn').addEventListener('click', function(){
 const googleIcon = document.querySelector('.google-icon');
 if (googleIcon) {
   googleIcon.addEventListener('error', function() {
-    this.style.display='none';
-    this.nextElementSibling.style.display='flex';
+    this.classList.add('hidden');
+    this.nextElementSibling.classList.remove('hidden');
+    this.nextElementSibling.classList.add('flex-show');
   });
 }
